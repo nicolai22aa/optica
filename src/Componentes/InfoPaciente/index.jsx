@@ -1,7 +1,6 @@
-import React from 'react';
 import './style.css';
 
-const PacienteCard = ({ nombre, edad, examen }) => {
+const InfoPaciente = ({ nombre, edad, examen }) => {
   return (
     <div className="paciente-card">
       <h3>{nombre}</h3>
@@ -11,4 +10,5 @@ const PacienteCard = ({ nombre, edad, examen }) => {
   );
 };
 
-export default PacienteCard;
+export default InfoPaciente;
+

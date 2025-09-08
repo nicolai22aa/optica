@@ -1,0 +1,44 @@
+/* === Pacientes === */
+.pacientes {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pacientes h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* === InfoPaciente Card === */
+.paciente-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.paciente-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.paciente-card h3 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.paciente-card p {
+  color: #374151;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}

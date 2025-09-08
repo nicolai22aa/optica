@@ -1,14 +1,19 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 const Navegacion = () => {
   return (
     <nav className="navbar">
-      <h1>Óptica</h1>
+      <div className="logo">JBSoptics</div>
       <ul>
-        <li>Inicio</li>
-        <li>Pacientes</li>
-        <li>Exámenes</li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/pacientes">Pacientes</Link></li>
+        <li><Link to="/examenes">Exámenes</Link></li>
+        <li><Link to="/login">Login</Link></li>
+        
+        
+
       </ul>
     </nav>
   );
