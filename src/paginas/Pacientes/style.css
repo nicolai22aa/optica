@@ -1,44 +1,98 @@
-/* === Pacientes === */
 .pacientes {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
-.pacientes h2 {
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 1.5rem;
-  text-align: center;
+/* Header */
+.content-header h1 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.content-header p {
+  color: #e5e7eb;
+  margin-bottom: 20px;
 }
 
-/* === InfoPaciente Card === */
-.paciente-card {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.filtros input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1;
+  color: #111;
+}
+
+.filtros .btn-nuevo {
+  flex: 0 0 auto;
+}
+
+/* Botón nuevo paciente */
+.btn-nuevo {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-nuevo:hover {
+  background: #1e40af;
+}
+
+/* Tabla */
+.tabla-pacientes {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  color: #fff;
+}
+.tabla-pacientes th,
+.tabla-pacientes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.tabla-pacientes th {
+  background: #1e40af;
+  color: white;
+}
+.tabla-pacientes tr:hover {
+  background: rgba(255,255,255,0.1);
 }
 
-.paciente-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+/* Botones de acciones */
+.btn-ver,
+.btn-editar,
+.btn-eliminar {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: white;
 }
-
-.paciente-card h3 {
-  font-size: 1.3rem;
-  color: #111827;
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-}
-
-.paciente-card p {
-  color: #374151;
-  font-size: 1rem;
-  margin: 0.2rem 0;
-}
+.btn-ver { background: #22c55e; }
+.btn-editar { background: #f59e0b; }
+.btn-eliminar { background: #ef4444; }
+.btn-ver:hover { background: #16a34a; }
+.btn-editar:hover { background: #d97706; }
+.btn-eliminar:hover { background: #dc2626; }

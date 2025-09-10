@@ -1,25 +1,176 @@
-/* ==== Home ==== */
+/* ==== General ==== */
 .home {
-  flex: 1; 
-  width: 100%;   /* ahora ocupa todo el ancho */
-  min-height: calc(100vh - 160px); /* ajusta espacio entre navbar y footer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1e40af); 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  background-color: #f9fafb;
+}
+
+/* ==== Hero ==== */
+.home section.hero {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb, #3b82f6);
   color: white;
-  padding: 2rem;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.home h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.home .hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.home p {
+.home .hero h1 span {
+  color: #facc15; /* Amarillo acento */
+}
+
+.home .hero p {
   font-size: 1.2rem;
-  max-width: 600px;
-  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.home .hero .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 0 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.home .hero .btn-primary {
+  background: #facc15;
+  color: #111;
+}
+
+.home .hero .btn-primary:hover {
+  background: #eab308;
+}
+
+.home .hero .btn-secondary {
+  background: white;
+  color: #1e3a8a;
+}
+
+.home .hero .btn-secondary:hover {
+  background: #f3f4f6;
+}
+
+/* ==== Servicios ==== */
+.home section.servicios {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home .servicios h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.home .servicios .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.home .servicios .card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home .servicios .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.home .servicios .card span {
+  font-size: 3rem;
+}
+
+.home .servicios .card h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.home .servicios .card p {
+  margin-top: 10px;
+  color: #374151; /* gris medio */
+}
+
+/* ==== Ventajas ==== */
+.home section.ventajas {
+  background: #f3f4f6;
+  padding: 60px 20px;
+}
+
+.home .ventajas h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.home .ventajas .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home .ventajas .item {
+  text-align: center;
+  padding: 20px;
+}
+
+.home .ventajas .item h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+.home .ventajas .item p {
+  color: #374151;
+}
+
+/* ==== CTA final ==== */
+.home section.cta {
+  background: #1e3a8a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.home .cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.home .cta p {
+  margin-bottom: 25px;
+  color: #dbeafe; /* azul muy claro */
+}
+
+.home .cta .btn-primary {
+  background: #facc15;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.home .cta .btn-primary:hover {
+  background: #eab308;
 }

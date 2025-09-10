@@ -8,40 +8,49 @@ function Registro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Registrando usuario:", nombre, email, password);
+    console.log("Registrando:", nombre, email, password);
     // Aquí después conectamos con Supabase
   };
 
   return (
-    <div className="registro-container">
-      <h2>Registro de Usuario</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Nombre completo"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Registrarse</button>
-      </form>
-      <p>
-        ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
-      </p>
+    <div className="container">
+      {/* Botón Inicio arriba derecha */}
+      <div className="top-right">
+        <a href="/">Inicio</a>
+      </div>
+
+      <div className="form-box">
+        <h1>Crear cuenta</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Registrarse</button>
+        </form>
+
+        <div className="extra-links">
+          <p>¿Ya tienes cuenta?</p>
+          <a href="/login">Ingresar</a>
+        </div>
+      </div>
     </div>
   );
 }

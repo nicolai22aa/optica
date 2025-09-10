@@ -1,4 +1,4 @@
-/* ==== Reset básico ==== */
+/* ==== Reset ==== */
 * {
   margin: 0;
   padding: 0;
@@ -8,55 +8,96 @@
 html, body, #root {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f4f6;
-  color: #111827;
 }
 
-/* ==== Contenedor principal ==== */
+/* Fondo y textos globales */
+body {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb, #1e40af);
+  color: #fff; /* 👈 textos blancos */
+}
+
+/* Contenedor principal */
 .App {
-  min-height: 100vh;     /* que ocupe toda la pantalla */
-  display: flex;
-  flex-direction: column; /* navbar arriba, main en medio, footer abajo */
-}
-
-/* ==== Navbar ==== */
-.navbar {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-/* ==== Contenido principal ==== */
-main {
-  flex: 1; /* ocupa el espacio restante */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ==== Footer ==== */
+/* Navbar */
+.navbar {
+  background-color: rgba(30, 58, 138, 0.9);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Footer */
 .footer {
   width: 100%;
-  background-color: #222;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f3f4f6;
   padding: 20px;
   text-align: center;
-  margin-top: auto; /* empuja el footer al final */
+  margin-top: auto;
 }
-
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .footer h4 {
-  margin-bottom: 8px;
-  color: #00bcd4;
+  color: #60a5fa;
 }
 
-.footer-copy {
-  font-size: 0.9rem;
-  opacity: 0.7;
+/* Tablas y formularios */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+table th {
+  background: #1e40af;
+  color: white;
+}
+table tr:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  color: #111; /* texto interno oscuro para legibilidad */
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #60a5fa;
+}
+
+/* Botones */
+button, .btn-nuevo, .btn-secundario {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-nuevo {
+  background: #2563eb;
+  color: white;
+}
+.btn-nuevo:hover {
+  background: #1e40af;
+}
+.btn-secundario {
+  color: #fff;
+}
+.btn-secundario:hover {
+  text-decoration: underline;
 }

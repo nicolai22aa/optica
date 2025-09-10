@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 const Dashboard = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <div className="dashboard">
-      {/* Sidebar */}
-      <aside className="sidebar">
+      {/* Sidebar lateral */}
+      <aside className={`sidebar ${open ? "open" : "closed"}`}>
+        <div className="sidebar-header">
+          <h2 className="logo">🏥 Salud+</h2>
+          <button className="toggle-btn" onClick={() => setOpen(!open)}>
+            {open ? "◀" : "▶"}
+          </button>
+        </div>
         <ul>
-          <li>🏠 Inicio</li>
+          <li className="active">🏠 Inicio</li>
           <li>👤 Pacientes</li>
           <li>📝 Consultas</li>
           <li>↔ Remisiones</li>
@@ -18,6 +26,11 @@ const Dashboard = () => {
 
       {/* Contenido principal */}
       <main className="content">
+        <header className="content-header">
+          <h1>Panel de Control</h1>
+          <p>Bienvenido a tu área de gestión</p>
+        </header>
+
         <div className="cards">
           <div className="card">🩺 Nueva consulta</div>
           <div className="card">👥 Ver pacientes</div>

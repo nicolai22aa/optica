@@ -12,31 +12,37 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      {/* ✅ Aquí se muestra el botón */}
-      
+    <div className="container">
+      {/* Botón Inicio arriba derecha */}
+      <div className="top-right">
+        <a href="/">Inicio</a>
+      </div>
 
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Ingresar</button>
-      </form>
-      <p>
-        ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
-      </p>
+      <div className="form-box">
+        <h1>Iniciar Sesión</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Ingresar</button>
+        </form>
+
+        <div className="extra-links">
+          <p>¿No tienes cuenta?</p>
+          <a href="/registro">Regístrate aquí</a>
+        </div>
+      </div>
     </div>
   );
 }

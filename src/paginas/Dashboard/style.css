@@ -1,134 +1,109 @@
+/* Reset para evitar márgenes blancos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* Layout */
 .dashboard {
   display: flex;
   min-height: 100vh;
-  background: #f9f9f9;
-  position: relative;
 }
 
 /* Sidebar */
 .sidebar {
+  background: #111827;
+  color: #fff;
   width: 220px;
-  background: #dbeaf4;
+  transition: width 0.3s ease;
   padding: 20px 10px;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar .logo {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+.sidebar.closed {
+  width: 60px;
 }
 
-.sidebar nav ul {
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #10b981;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 
-.sidebar nav ul li {
+.sidebar ul li {
   padding: 12px;
-  margin: 5px 0;
+  margin: 8px 0;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
-  font-weight: 500;
+  transition: background 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.sidebar nav ul li:hover {
-  background: #c1d7eb;
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #10b981;
+  color: #fff;
 }
 
-/* Contenido */
+/* Contenido principal */
 .content {
   flex: 1;
-  padding: 40px;
-  position: relative;
+  padding: 30px;
 }
 
+.content-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #10b981;
+}
+
+/* Tarjetas */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: #f1f1f1;
-  padding: 30px;
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
   text-align: center;
   font-size: 1.2rem;
-  border-radius: 8px;
+  transition: transform 0.2s, background 0.3s;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .card:hover {
-  background: #e0e0e0;
-}
-
-/* Botón flotante */
-.floating-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #2ecc71;
-  color: white;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
-}
-
-.floating-btn:hover {
-  transform: scale(1.1);
-}
-
-/* Botón menú hamburguesa (solo móvil) */
-.menu-toggle {
-  display: none;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: #3498db;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    transform: translateX(-100%);
-    z-index: 1000;
-  }
-
-  .sidebar.open {
-    transform: translateX(0);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .content {
-    padding: 80px 20px 20px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  background: #10b981;
+  transform: scale(1.05);
 }
