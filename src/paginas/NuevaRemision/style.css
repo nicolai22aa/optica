@@ -1,0 +1,148 @@
+/* ====== Sección Remisiones ====== */
+.remisiones {
+  padding: 20px;
+  color: #fff;
+}
+
+.content-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.content-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.content-header p {
+  color: #d1d5db;
+}
+
+/* ====== Filtros ====== */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filtros input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.btn-nuevo {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn-nuevo:hover {
+  background: #1e40af;
+}
+
+/* ====== Tabla Remisiones ====== */
+.tabla-remisiones {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabla-remisiones th,
+.tabla-remisiones td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+}
+
+.tabla-remisiones th {
+  background: rgba(37, 99, 235, 0.8);
+  color: #fff;
+}
+
+.tabla-remisiones tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tabla-remisiones td {
+  color: #f3f4f6;
+}
+
+/* ====== Formulario Nueva Remisión ====== */
+.nueva-remision {
+  padding: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.form-remision {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-remision label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.form-remision input,
+.form-remision textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color: #111;
+  font-size: 0.9rem;
+}
+
+.form-remision textarea {
+  resize: none;
+}
+
+.form-remision button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.form-remision button:hover {
+  background: #1e40af;
+}
+
+.volver {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-secundario {
+  background: #374151;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.btn-secundario:hover {
+  background: #111827;
+}
